@@ -7,7 +7,6 @@
 </template>
 
 <script lang="ts">
-import { getStateAndSelectors } from 'universal-model-vue';
 import store from '@/store/store';
 import changeUserName from '@/header/model/actions/changeUserName';
 
@@ -15,7 +14,7 @@ export default {
   name: 'HeaderView',
 
   setup(): object {
-    const [{ headerState }] = getStateAndSelectors(store);
+    const [{ headerState }] = store.getStateAndSelectors();
 
     return {
       headerState,

@@ -18,7 +18,6 @@
 </template>
 
 <script lang="ts">
-import { getStateAndSelectors } from 'universal-model-vue';
 import store from '@/store/store';
 import toggleShouldShowOnlyDoneTodos from '@/todolist/model/actions/toggleShouldShowOnlyDoneTodos';
 import removeTodo from '@/todolist/model/actions/removeTodo';
@@ -27,7 +26,7 @@ export default {
   name: 'TodoListView',
 
   setup(): object {
-    const [{ todosState }, { shownTodos }] = getStateAndSelectors(store);
+    const [{ todosState }, { shownTodos }] = store.getStateAndSelectors();
 
     return {
       todosState,
