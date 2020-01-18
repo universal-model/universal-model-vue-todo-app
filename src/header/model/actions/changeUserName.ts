@@ -1,6 +1,6 @@
-import store from '../../../store/store';
+import store from "@/store/store";
 
 export default function changeUserName(newUserName: string): void {
-  const [{ headerState }] = store.getStateAndSelectors();
+  const { headerState } = store.getState();
   headerState.userName = newUserName;
 }

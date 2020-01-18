@@ -4,9 +4,7 @@ export interface Todo {
 }
 
 export default {
-  todos: [
-    { name: 'first todo', isDone: true },
-    { name: 'second todo', isDone: false }
-  ] as Todo[],
-  shouldShowOnlyDoneTodos: false
+  todos: [] as Todo[],
+  shouldShowOnlyDoneTodos: false,
+  isFetchingTodos: false
 };

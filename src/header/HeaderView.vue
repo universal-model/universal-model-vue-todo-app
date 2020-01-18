@@ -1,8 +1,8 @@
 <template>
   <div>
     <h1>{{ headerState.userName }}</h1>
-    <label>User name:</label>
-    <input @change="({ target: { value } }) => changeUserName(value)" />
+    <label for="userName">User name:</label>
+    <input id="userName" @change="({ target: { value } }) => changeUserName(value)" />
   </div>
 </template>
 
