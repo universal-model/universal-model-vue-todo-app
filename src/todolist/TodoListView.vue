@@ -1,12 +1,12 @@
 <template>
   <div>
     <input
-      id="shouldShowOnlyDoneTodos"
+      id="shouldShowOnlyUnDoneTodos"
       type="checkbox"
       :checked="todosState.shouldShowOnlyDoneTodos"
-      @click="toggleShouldShowOnlyDoneTodos"
+      @click="toggleShouldShowOnlyUnDoneTodos"
     />
-    <label for="shouldShowOnlyDoneTodos">Show only done todos</label>
+    <label for="shouldShowOnlyUnDoneTodos">Show only undone todos</label>
     <ul>
       <li v-for="todo in shownTodos">
         <input :id="todo.name" type="checkbox" :checked="todo.isDone" @click="toggleIsDoneTodo(todo)" />
@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import store from '@/store/store';
-import toggleShouldShowOnlyDoneTodos from '@/todolist/model/actions/toggleShouldShowOnlyDoneTodos';
+import toggleShouldShowOnlyUnDoneTodos from '@/todolist/model/actions/toggleShouldShowOnlyUnDoneTodos';
 import removeTodo from '@/todolist/model/actions/removeTodo';
 import toggleIsDoneTodo from '@/todolist/model/actions/toggleIsDoneTodo';
 import { onMounted, onUnmounted } from 'vue';
@@ -46,7 +46,7 @@ export default {
       todosState,
       shownTodos,
       removeTodo,
-      toggleShouldShowOnlyDoneTodos,
+      toggleShouldShowOnlyUnDoneTodos,
       toggleIsDoneTodo
     };
   }

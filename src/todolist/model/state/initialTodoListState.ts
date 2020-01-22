@@ -5,6 +5,6 @@ export interface Todo {
 
 export default {
   todos: [] as Todo[],
-  shouldShowOnlyDoneTodos: false,
+  shouldShowOnlyUnDoneTodos: false,
   isFetchingTodos: false
 };
