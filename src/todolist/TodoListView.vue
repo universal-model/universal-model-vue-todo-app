@@ -3,11 +3,13 @@
     <input
       id="shouldShowOnlyUnDoneTodos"
       type="checkbox"
-      :checked="todosState.shouldShowOnlyDoneTodos"
+      :checked="todosState.shouldShowOnlyUnDoneTodos"
       @click="toggleShouldShowOnlyUnDoneTodos"
     />
     <label for="shouldShowOnlyUnDoneTodos">Show only undone todos</label>
-    <ul>
+    <div v-if="todosState.isFetchingTodos">Fetching todos...</div>
+    <div v-else-if="todosState.hasTodosFetchFailure">Failed to fetch todos</div>
+    <ul v-else>
       <li v-for="todo in shownTodos">
         <input :id="todo.name" type="checkbox" :checked="todo.isDone" @click="toggleIsDoneTodo(todo)" />
         <label :for="todo.name">{{ todo.name }}</label>
