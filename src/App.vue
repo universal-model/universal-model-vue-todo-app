@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts">
-import HeaderView from '@/header/HeaderView.vue';
-import TodoListView from '@/todolist/TodoListView.vue';
+import HeaderView from '@/header/view/HeaderView.vue';
+import TodoListView from '@/todolist/view/TodoListView.vue';
 
 // noinspection JSUnusedGlobalSymbols
 export default {
