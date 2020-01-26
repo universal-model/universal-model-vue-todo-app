@@ -10,10 +10,12 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
-    "universal-model-vue": "^0.6.0",
-    "vue": "^3.0.0-alpha.1"
+    "lodash": "^4.17.15",
+    "universal-model-vue": "^0.8.0",
+    "vue": "^3.0.0-alpha.3"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.149",
     "@vue/compiler-sfc": "^3.0.0-alpha.1",
     "css-loader": "^3.4.0",
     "eslint": "^6.8.0",

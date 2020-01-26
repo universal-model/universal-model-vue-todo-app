@@ -12,7 +12,7 @@
     <ul v-else>
       <li v-for="todo in shownTodos">
         <input :id="todo.name" type="checkbox" :checked="todo.isDone" @click="toggleIsDoneTodo(todo)" />
-        <label :for="todo.name">{{ todo.name }}</label>
+        <label :for="todo.name">{{ userName }}: {{ todo.name }}</label>
         <button @click="removeTodo(todo)">Remove</button>
       </li>
     </ul>
@@ -32,7 +32,7 @@ export default {
   name: 'TodoListView',
 
   setup(): object {
-    const [{ todosState }, { shownTodos }] = store.getStateAndSelectors();
+    const [{ todosState }, { shownTodos, userName }] = store.getStateAndSelectors();
 
     onMounted(() => {
       // noinspection JSIgnoredPromiseFromCall
@@ -47,6 +47,7 @@ export default {
     return {
       todosState,
       shownTodos,
+      userName,
       removeTodo,
       toggleShouldShowOnlyUnDoneTodos,
       toggleIsDoneTodo
