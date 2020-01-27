@@ -11,7 +11,7 @@
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
     "lodash": "^4.17.15",
-    "universal-model-vue": "^0.9.0",
+    "universal-model-vue": "^0.10.0",
     "vue": "^3.0.0-alpha.3"
   },
   "devDependencies": {
