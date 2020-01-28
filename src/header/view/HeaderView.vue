@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ headerState.userName }}</h1>
+    <h1>{{ headerText }}</h1>
     <label for="userName">User name:</label>
     <input id="userName" @change="({ target: { value } }) => changeUserName(value)" />
   </div>
@@ -14,10 +14,10 @@ export default {
   name: 'HeaderView',
 
   setup(): object {
-    const [{ headerState }] = store.getStateAndSelectors();
+    const { headerText } = store.getSelectors();
 
     return {
-      headerState,
+      headerText,
       changeUserName
     };
   }
