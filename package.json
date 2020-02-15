@@ -8,7 +8,7 @@
     "build": "webpack"
   },
   "dependencies": {
-    "universal-model-vue": "^0.11.0",
+    "universal-model-vue": "^0.11.4",
     "vue": "^3.0.0-alpha.4"
   },
   "devDependencies": {
